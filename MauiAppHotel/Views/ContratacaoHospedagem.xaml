@@ -5,7 +5,7 @@
              Title="ContratacaoHospedagem"
              NavigationPage.HasNavigationBar="False"
              BackgroundColor="{StaticResource Gray300}">
-    
+
     <VerticalStackLayout VerticalOptions="CenterAndExpand"
                          Padding="10">
         <Label 
@@ -13,69 +13,73 @@
             FontFamily="BricolageGrotesque"
             FontSize="50"
             TextColor="DarkBlue" />
+
         <Frame Padding="10">
             <VerticalStackLayout>
                 <Grid RowDefinitions="auto, auto"
                       ColumnDefinitions="*, *, 2*">
 
                     <Label Grid.Row="0" Grid.Column="0"
-                            Text="Adultos: " />
+                           Text="Adultos:" />
 
                     <Label Grid.Row="0" Grid.Column="1"
-                           TextColor="DarkBlue" 
+                           TextColor="DarkBlue"
                            Text="{Binding Value}"
-                           BindingContext="{x:Reference stp_adultos}"/>
+                           BindingContext="{x:Reference stp_adultos}" />
 
                     <Stepper Grid.Row="0" Grid.Column="2"
                              x:Name="stp_adultos"
                              Minimum="0"
                              Maximum="10"
-                             Increment="1"/>
+                             Increment="1" />
 
                     <Label Grid.Row="1" Grid.Column="0"
-                           Text="Crianças: " />
+                           Text="Crianças:" />
 
                     <Label Grid.Row="1" Grid.Column="1"
-                           TextColor="DarkBlue" 
+                           TextColor="DarkBlue"
                            Text="{Binding Value}"
-                           BindingContext="{x:Reference stp_crianças}"/>
+                           BindingContext="{x:Reference stp_criancas}" />
 
                     <Stepper Grid.Row="1" Grid.Column="2"
-                             x:Name="stp_crianças"
+                             x:Name="stp_criancas"
                              Minimum="0"
                              Maximum="10"
-                             Increment="1"/>
+                             Increment="1" />
                 </Grid>
 
-                <Label Text="Escolha sua Suíte"/>
+                <Label Text="Escolha sua Suíte" />
 
                 <Picker x:Name="pck_quarto"
                         Title="Selecione sua Acomodação"
-                        ItemDisplayBinding="{Binding Descricao}"/>
+                        ItemDisplayBinding="{Binding Descricao}" />
 
-                <Frame Padding="10"
-                       Margin="10">
+                <Frame Padding="10" Margin="10">
                     <VerticalStackLayout>
-                        <Label Text="Periodo de estadia"/>
-                        <HorizontalStackLayout>
-                            <Label Text="Check-in: "/>
-                            <DatePicker x:Name="dtpck_checkin"
-                                        DateSelected="dtpck_checkin_DateSelect"
-                                        Format="dd/MM/yyyy"/>
-                        </HorizontalStackLayout>
-                        <HorizontalStackLayout>
-                            <Label Text="Check-out: "/>
-                            <DatePicker x:Name="dtpck_checkout"
-                                        Format="dd/MM/yyyy"/>
+                        <Label Text="Período da Estadia" />
 
+                        <HorizontalStackLayout>
+                            <Label Text="Check-in:" />
+                            <DatePicker x:Name="dtpck_checkin"
+                                        DateSelected="dtpck_checkin_DateSelected"
+                                        Format="dd/MM/yyyy" />
+                        </HorizontalStackLayout>
+
+                        <HorizontalStackLayout>
+                            <Label Text="Check-out:" />
+                            <DatePicker x:Name="dtpck_checkout"
+                                        Format="dd/MM/yyyy" />
                         </HorizontalStackLayout>
                     </VerticalStackLayout>
-
                 </Frame>
-                <!-- Botão com evento de navegação -->
+
                 <Button Text="Avançar"
                         x:Name="btnAvancar"
-                        Clicked="btnAvancar_Clicked"/>
+                        Clicked="btnAvancar_Clicked"
+                        BackgroundColor="DarkBlue"
+                        TextColor="White"
+                        CornerRadius="15"
+                        FontAttributes="Bold"/>
             </VerticalStackLayout>
         </Frame>
     </VerticalStackLayout>
