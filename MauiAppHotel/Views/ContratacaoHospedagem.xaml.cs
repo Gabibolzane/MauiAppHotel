@@ -11,7 +11,15 @@ namespace MauiAppHotel.Views
 
         private async void btnAvancar_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Sobre());
+            try
+            {
+                Navigation.PushAsync(new HospedagemContratada());
+
+            }
+            catch (Exception ex)
+            {
+                DisplayAlert("Ops", ex.Message, "OK");
+            }
         }
     }
 }
