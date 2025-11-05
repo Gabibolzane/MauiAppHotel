@@ -32,5 +32,10 @@ namespace MauiAppHotel.Views
                 DisplayAlert("Ops", ex.Message, "OK");
             }
         }
+        private void dtpck_checkin_DateSelected(object sender, DateChangedEventArgs e)
+        {
+        
+        }
+
     }
 }
