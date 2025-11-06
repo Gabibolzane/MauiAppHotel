@@ -75,7 +75,7 @@
 
                 <Button Text="Avançar"
                         x:Name="btnAvancar"
-                        Clicked="btnAvancar_Clicked"
+                        Clicked="BtnAvancar_Clicked"
                         BackgroundColor="DarkBlue"
                         TextColor="White"
                         CornerRadius="15"

@@ -22,7 +22,7 @@ namespace MauiAppHotel.Views
             dtpck_checkout.MaximumDate = DateTime.Now.AddMonths(6);
         }
 
-        private async void btnAvancar_Clicked(object sender, EventArgs e)
+        private async void BtnAvancar_Clicked(object sender, EventArgs e)
         {
             try
             {
@@ -42,6 +42,10 @@ namespace MauiAppHotel.Views
             
             dtpck_checkout.MinimumDate = data_selecionada_checkin.AddDays(1);
             dtpck_checkout.MaximumDate = data_selecionada_checkin.AddMonths(6);
+        }
+        private async void btnAvancar_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new HospedagemContratada());
         }
     }
 }
