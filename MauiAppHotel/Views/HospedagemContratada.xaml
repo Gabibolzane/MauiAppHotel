@@ -4,7 +4,6 @@
              x:Class="MauiAppHotel.Views.HospedagemContratada"
              >
 
-    <NavigationPage.TitleView>
         <Label Text="Hospedagem Contratada"
                HorizontalOptions="Center" 
                VerticalOptions="CenterAndExpand"
