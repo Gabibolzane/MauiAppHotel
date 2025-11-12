@@ -4,6 +4,7 @@
              x:Class="MauiAppHotel.Views.HospedagemContratada"
              >
 
+    <NavigationPage.TitleView>
         <Label Text="Hospedagem Contratada"
                HorizontalOptions="Center" 
                VerticalOptions="CenterAndExpand"
@@ -44,16 +45,24 @@
                 <Label Grid.Row="0" Grid.Column="1" Text="Check-out: "/>
                 <Label Grid.Row="0" Grid.Column="2" Text="Estadia: "/>
 
-                <Label Grid.Row="1" Grid.Column="0" Text="{Binding DataCheckIn} "/>
-                <Label Grid.Row="1" Grid.Column="1" Text="{Binding DataCheckOut}"/>
-                <Label Grid.Row="1" Grid.Column="2" Text="{Binding Estadia} "/>
+                <Label Grid.Row="1" Grid.Column="0" 
+                       Text="{Binding DataCheckIn,StringFormat='{}{0:dd/MM/yyyy}'} "
+                       TextColor="DarkBlue"/>
+                
+                <Label Grid.Row="1" Grid.Column="1" 
+                       Text="{Binding DataCheckOut,StringFormat='{}{0:dd/MM/yyyy}'}"
+                       TextColor="DarkBlue"/>
+                <Label Grid.Row="1" Grid.Column="2"
+                       Text="{Binding Estadia} " 
+                       TextColor="DarkBlue"/>
             </Grid>
         </Frame>
 
         <Frame Margin="10">
             <HorizontalStackLayout>
                 <Label Text="Valor Total: "/>
-                <Label Text="{Binding ValorTotal}"/>
+                <Label Text="{Binding ValorTotal, StringFormat='{}{0:dd/MM/yyyy}'}"
+                       TextColor="DarkBlue"/>
             </HorizontalStackLayout>
         </Frame>
 
@@ -68,11 +77,11 @@
                     Clicked="Avancar2_Clicked"/>
 
             <Button Text="Voltar" 
-         BackgroundColor="DarkBlue"
-         TextColor="White"
-         CornerRadius="10"
-         WidthRequest="150"
-         Clicked="Voltar_Clicked"  />
+            BackgroundColor="DarkBlue"
+            TextColor="White"
+            CornerRadius="10"
+            WidthRequest="150"
+            Clicked="Voltar_Clicked"/>
 
         </VerticalStackLayout>
 
