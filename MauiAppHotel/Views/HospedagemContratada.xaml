@@ -2,10 +2,11 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiAppHotel.Views.HospedagemContratada"
-             >
+             BackgroundColor="{StaticResource Gray100}">
 
     <NavigationPage.TitleView>
-        <Label Text="Hospedagem Contratada"
+        <Label BackgroundColor="{StaticResource Gray100}"
+               Text="Hospedagem Contratada"
                HorizontalOptions="Center" 
                VerticalOptions="CenterAndExpand"
                FontFamily="BricolageGrotesque"
@@ -61,7 +62,7 @@
         <Frame Margin="10">
             <HorizontalStackLayout>
                 <Label Text="Valor Total: "/>
-                <Label Text="{Binding ValorTotal, StringFormat='{}{0:dd/MM/yyyy}'}"
+                <Label Text="{Binding ValorTotal}"
                        TextColor="DarkBlue"/>
             </HorizontalStackLayout>
         </Frame>

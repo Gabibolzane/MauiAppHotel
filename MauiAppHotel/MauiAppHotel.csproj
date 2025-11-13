@@ -57,6 +57,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Remove="Views\Hospedagem.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <MauiFont Remove="Resources\Fonts\BricolageGrotesque-VariableFont.ttf.ttf" />
 	  <MauiFont Remove="Resources\Fonts\Orbitron-Black.ttf" />
 	  <MauiFont Remove="Resources\Fonts\Orbitron-Bold.ttf" />
