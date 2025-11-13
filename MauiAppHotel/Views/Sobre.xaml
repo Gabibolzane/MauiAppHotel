@@ -13,12 +13,12 @@
             <Label Text="Sobre o Aplicativo"
                    FontFamily="BricolageGrotesque"
                    FontSize="36"
-                   TextColor="DarkBlue"
+                   TextColor="DarkViolet"
                    HorizontalOptions="Center"/>
 
             
             <Border
-                Stroke="DarkBlue"
+                Stroke="DarkViolet"
                 StrokeThickness="1"
                 Background="{StaticResource Gray500}"
                 StrokeShape="RoundRectangle 15"
@@ -62,7 +62,7 @@
 
             
             <Button Text="Voltar"
-                    BackgroundColor="DarkBlue"
+                    BackgroundColor="DarkViolet"
                     TextColor="White"
                     CornerRadius="10"
                     WidthRequest="150"

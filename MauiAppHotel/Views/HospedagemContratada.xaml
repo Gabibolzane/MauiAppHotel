@@ -10,29 +10,33 @@
     <VerticalStackLayout VerticalOptions="CenterAndExpand">
 
         <Label Text="{Binding QuartoSelecionado.Descricao}"
-                   TextColor="DarkBlue"
+                   TextColor="DarkViolet"
                    FontFamily="Kalam"
                    FontSize="50"
                    HorizontalTextAlignment="Center"/>
 
-        <Frame Margin="10" BackgroundColor="{StaticResource Gray200}">
+        <Frame Margin="10">
             <StackLayout Orientation="Horizontal">
-                <HorizontalStackLayout HorizontalOptions="FillAndExpand">
-                    <Label Text="Adultos: "/>
-                    <Label Text="{Binding QntAdultos}"
-                       TextColor="DarkBlue"/>
-                </HorizontalStackLayout>
+               
+                    <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
+                        <Label Text="Adultos: "/>
+                        <Label Text="{Binding QntAdultos}"
+                           TextColor="DarkViolet"/>
+                    </HorizontalStackLayout>
 
-                <HorizontalStackLayout HorizontalOptions="FillAndExpand">
-                    <Label Text="     Crianças: "/>
-                    <Label Text="{Binding QntCriancas}"
-                       TextColor="DarkBlue"/>
-                </HorizontalStackLayout>
+                    <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
+                        <Label Text="     Crianças: "/>
+                        <Label Text="{Binding QntCriancas}"
+                           TextColor="DarkViolet"/>
+                    </HorizontalStackLayout>
+             
             </StackLayout>
+                
         </Frame>
 
-        <Frame Margin="10" BackgroundColor="{StaticResource Gray200}">
-            <Grid ColumnDefinitions="*, *, *"
+        <Frame Margin="10" >
+           
+                <Grid ColumnDefinitions="*, *, *"
                   RowDefinitions="Auto, Auto">
                 <Label Grid.Row="0" Grid.Column="0" Text="Check-in: "/>
                 <Label Grid.Row="0" Grid.Column="1" Text="Check-out: "/>
@@ -40,22 +44,23 @@
 
                 <Label Grid.Row="1" Grid.Column="0" 
                        Text="{Binding DataCheckIn,StringFormat='{}{0:dd/MM/yyyy}'} "
-                       TextColor="DarkBlue"/>
-                
+                       TextColor="DarkViolet"/>
+
                 <Label Grid.Row="1" Grid.Column="1" 
                        Text="{Binding DataCheckOut,StringFormat='{}{0:dd/MM/yyyy}'}"
-                       TextColor="DarkBlue"/>
+                       TextColor="DarkViolet"/>
                 <Label Grid.Row="1" Grid.Column="2"
                        Text="{Binding Estadia} " 
-                       TextColor="DarkBlue"/>
+                       TextColor="DarkViolet"/>
             </Grid>
+               
         </Frame>
 
-        <Frame Margin="10" BackgroundColor="{StaticResource Gray200}">
-            <HorizontalStackLayout>
-                <Label Text="Valor Total: "/>
-                <Label Text="{Binding ValorTotal}"
-                       TextColor="DarkBlue"/>
+        <Frame Margin="10"  >
+            <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
+                <Label Text="Valor Total:  "/>
+                <Label Text="{Binding ValorTotal,StringFormat='{}{0:c}'}"
+                       TextColor="DarkViolet"/>
             </HorizontalStackLayout>
         </Frame>
 
@@ -63,21 +68,24 @@
                              HorizontalOptions="Center">
 
             <Button Text="Avançar"
-                    BackgroundColor="DarkBlue"
+                    BackgroundColor="DarkViolet"
                     TextColor="White"
                     CornerRadius="10"
                     WidthRequest="150"
-                    Clicked="Avancar2_Clicked"/>
+                    Clicked="Avancar2_Clicked"
+                    HorizontalOptions="Center"/>
 
             <Button Text="Voltar" 
-            BackgroundColor="DarkBlue"
+            BackgroundColor="DarkViolet"
             TextColor="White"
             CornerRadius="10"
             WidthRequest="150"
-            Clicked="Voltar_Clicked"/>
+            Clicked="Voltar_Clicked" 
+            HorizontalOptions="Center"/>
 
         </VerticalStackLayout>
-
+  
 
     </VerticalStackLayout>
+
 </ContentPage>
